@@ -5,10 +5,38 @@
     body{
         margin: 0%;
         padding: 0%;
-        background-color: #f3f3f3;
+        background-color: #222;
     }
     div{
+        color: #eee;
         font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    }
+    a{
+        text-decoration: none;
+        color: #eee;
+    }
+    a:hover{
+        text-decoration: underline;
+    }
+    div.nameBlock{
+        width: 100%;
+        height: 100%;
+    }
+    div.nameTable{
+        position: absolute;
+        top:  50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+    }
+    div.nameText{
+        text-align: center;
+        font-weight: 600;
+        font-size: 75;
+        line-height: 2;
+        color:#fff;
+    }
+    div.nameEmail{
+        text-align: center;
     }
     div.headerWrapper{
         display: table;
@@ -19,7 +47,7 @@
         text-align:left;
         font-weight: 600;
         width: 100%;
-        background-color: rgb(191, 191, 191);
+        background-color: rgb(64, 64, 64);
         height: 60px;
     }
     div.headerText{
@@ -27,7 +55,6 @@
         vertical-align: middle;
         padding-left: 5rem;
         height: 60px;
-        font-size: 27;
     }
     div.headerEmail{
         display:table-cell;
@@ -47,8 +74,9 @@
         max-width: 1140px;
     }
     div.sectionTitle{
+        text-decoration: underline;
         text-align: center;
-        font-weight: 600;
+        font-weight: bold;
         font-size: 30;
         line-height: 2;
     }
@@ -58,6 +86,7 @@
         text-align: center;
     }
     div.projectTitle{
+        font-weight: bold;
         font-size: 20;
         line-height: 2;
     }
@@ -67,7 +96,7 @@
     }    
     div.companyTitle{
         text-align: center;
-        font-weight: 600;
+        font-weight: bold;
         font-size: 26;
         line-height: 2;
     }
@@ -96,19 +125,53 @@
         width:62rem;
         height: 35rem;
     }
+    .h-divider {
+    margin: auto;
+    margin-top: -10px;
+    width: 100%;
+    position: relative;
+    }
+
+    .h-divider .shadow {
+    overflow: hidden;
+    height: 20px;
+    }
+
+    .h-divider .shadow:after {
+    content: '';
+    display: block;
+    margin: -25px auto 0;
+    width: 100%;
+    height: 25px;
+    border-radius: 125px/12px;
+    box-shadow: 0 0 8px rgb(255, 255, 255);
+    }
 </style>
 
 <body>
     <div class="headerWrapper">
         <div class="header">
-            <div class="headerText">Charlie Ueng</div>
+            <div class="headerText">
+                <a href="#top">Top</a>
+                | <a href="#education">Education</a>
+                | <a href="#experience">Expeirence</a>
+            </div>
             <div class="headerEmail">charlieuengworks@gmail.com</div>
+        </div>
+    </div>
+    <div id="top" class="nameBlock">
+        <div class="nameTable">
+            <div class="nameText">Charlie Ueng</div>
+            <div class="h-divider">
+                <div class="shadow"></div>
+            </div>
+            <div class="nameEmail">Unity3D - VR - WebGL - Computer Graphics - Substance Painter - C++</div>
         </div>
     </div>
     <div><!--outer-->
         <div class="content"><!--content column-->
             <div><!--Education block-->
-                <div class="sectionTitle"><!--section title-->
+                <div id="education" class="sectionTitle"><!--section title-->
                     Education
                 </div>
                 <div class="projectTitle"><!--company, title-->
@@ -130,7 +193,7 @@
                     Day time class
                 </div>
             </div>
-            <div class="sectionTitle"><!--section title-->
+            <div id="experience" class="sectionTitle"><!--section title-->
                 Experience
             </div>
             <div class="companyTitle"><!--company, title-->
